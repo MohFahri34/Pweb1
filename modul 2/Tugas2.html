@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Data Kamar</title>
+    <style>
+      body {
+        font-family: "Castellar", sans-serif;
+        background-color: #f4f4f9;
+        color: rgb(43, 43, 43);
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .container {
+        width: 70%;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: rgb(199, 190, 190);
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        width: 150px;
+        font-weight: bold;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-group input[type="file"] {
+        width: auto;
+        padding: 5px;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .button-container button {
+        width: 100px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .button-container button:hover {
+        background-color: #45a049;
+      }
+
+      .button-container button[type="reset"] {
+        background-color: #f44336;
+      }
+
+      .button-container button[type="reset"]:hover {
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Tambah Data Kamar</h1>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="id_kamar">ID Kamar:</label>
+          <input type="number" name="id_kamar" id="id_kamar" required />
+        </div>
+
+        <div class="form-group">
+          <label for="gambar_ruangan">Gambar Ruangan:</label>
+          <input type="file" name="gambar_ruangan" id="gambar_ruangan" accept="image/*" required />
+        </div>
+
+        <div class="form-group">
+          <label for="jenis_kamar">Jenis Kamar:</label>
+          <select name="jenis_kamar" id="jenis_kamar" required>
+            <option value="pilih">--Pilih--</option>
+            <option value="Standar">Standar</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Family">Family</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="harga">Harga:</label>
+          <input type="" name="harga" id="harga" required />
+        </div>
+
+        <div class="form-group">
+          <label for="fasilitas">Fasilitas:</label>
+          <textarea name="fasilitas" id="fasilitas" rows="3" required></textarea>
+        </div>
+
+        <div class="button-container">
+          <button type="submit" name="submit" value="submit">SIMPAN</button>
+          <button type="reset" name="reset" value="reset">BATAL</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

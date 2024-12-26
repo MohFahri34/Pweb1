@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pemesanan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Castellar", sans-serif;
+        background-color: #f4f4f9;
+        color: rgb(43, 43, 43);
+        margin: 15px;
+        padding: 15px;
+      }
+      .container {
+        width: 65%;
+        margin: auto;
+        padding: 80px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #dedede;
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        width: 150px;
+        font-weight: bold;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 80%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .form-group select#tipe_kamar,
+      .form-group input#durasi_menginap {
+        width: 10%;
+        margin-left: 0px;
+      }
+
+      .form-group input#breakfast {
+        width: auto;
+        padding: 0;
+        margin-left: 10px;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+      .button-container button {
+        width: 100px;
+        padding: 10px;
+        background-color: #0037ae;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .button-container button:hover {
+        background-color: #041a48;
+      }
+
+      .button-container button[type="reset"] {
+        background-color: #ffae00;
+        color: black;
+      }
+
+      .button-container button[type="reset"]:hover {
+        background-color: #816426;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FORM PEMESANAN</h1>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="id_pemesan">Id Pemesan:</label>
+          <input type="number" name="id_pemesan" id="id_pemesan" required />
+        </div>
+
+        <div class="form-group">
+          <label for="nama_pemesan">Nama Pemesan:</label>
+          <input type="text" name="nama_pemesan" id="nama_pemesan" required />
+        </div>
+
+        <div class="form-group">
+          <label for="no_identitas">No Identitas:</label>
+          <input type="number" name="no_identitas" id="no_identitas" required />
+        </div>
+
+        <div class="form-group">
+          <label for="tipe_kamar">Tipe Kamar:</label>
+          <select name="tipe_kamar" id="tipe_kamar" required>
+            <option value="pilih">--Pilih--</option>
+            <option value="Standar">Standar</option>
+            <option value="Deluxe">Deluxe</option>
+            <option value="Family">Family</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="harga">Harga:</label>
+          <input type="" name="harga" id="harga" required />
+        </div>
+
+        <div class="form-group">
+          <label for="tgl_pesan">Tanggal Pesan:</label>
+          <input type="date" name="tgl_pesan" id="tgl_pesan" required />
+        </div>
+
+        <div class="form-group">
+          <label for="durasi_menginap">Durasi Menginap:</label>
+          <input type="number" name="durasi_menginap" id="durasi_menginap" min="1" required /> Hari
+        </div>
+
+        <div class="form-group">
+          <label for="breakfast">Termasuk Breakfast:</label>
+          <input type="checkbox" name="breakfast" id="breakfast" required /> Ya
+        </div>
+
+        <div class="form-group">
+          <label for="total_bayar">Total Bayar:</label>
+          <input type="number" name="total_bayar" id="total_bayar" required />
+        </div>
+
+        <div class="button-container">
+          <button type="submit" name="simpan" value="simpan">SIMPAN</button>
+          <button type="reset" name="batal" value="batal">BATAL</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
