@@ -1,0 +1,91 @@
+body {
+  background-color: black;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sansserif;
+  color: white;
+}
+nav {
+  background-color: #4f4f4f;
+  display: inline-block;
+  width: 100%;
+}
+nav ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+nav ul li {
+  float: left;
+  background-color: #4f4f4f;
+  gap: 1px;
+}
+nav a {
+  display: block;
+  padding: 0 10px;
+  color: #fff;
+  line-height: 60px;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  background-color: black;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+}
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul ul li {
+  width: 170;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+nav ul ul ul li {
+  position: relative;
+  top: -50px;
+  left: 170px;
+}
+main {
+  flex: 1;
+  display: flex;
+  gap: 50px;
+  padding: 8px;
+}
+.videos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: none;
+  padding: 1%;
+  height: 1%;
+}
+.gambar {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+.gambar img {
+  width: 300px;
+  height: 130px;
+}
+.header-logo {
+  display: flex;
+  gap: 600px;
+}
+footer {
+  flex: 0 0 5%;
+  background-color: #4f4f4f;
+  text-align: center;
+  padding: 1px;
+}
