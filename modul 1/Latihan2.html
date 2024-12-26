@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Latihan 2</title>
+    <style>
+        nav {
+            background-color: #7e6c6c;
+            display: inline-block;
+            width: 100%;
+        }
+        nav ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+        nav ul li {
+            float: left;
+            background-color: #7e6c6c;
+        }
+        nav a{
+            display: block;
+            padding: 0 10px;
+            color: #fff;
+            line-height: 60px;
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover{
+            background-color: #000;
+        }
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 60px;
+        }
+        nav ul li:hover > ul {
+            display: block;
+        }
+        nav ul ul li {
+            width: 170;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+        nav ul ul ul li {
+            position: relative;
+            top: -50px;
+            left: 170px;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;">
+    <h1>HOTEL</h1>
+    <img src="https://ik.imagekit.io/tvlk/blog/2020/03/Kollektiv-Hotel-Bandung.jpeg?tr=dpr-2,w-675" alt="Gambar Hotel"
+    width="340px"
+    height="100px">   
+</header>
+<nav>
+    <ul>
+      <li><a href="">HOME</a></li>
+      <li><a href="">KAMAR</a></li>
+      <li><a href="">FASILITAS</a>
+         <ul>
+                <li><a href="">PETUALANG ALAM</a></li>
+                <li><a href="">KOLAM RENANG</a>
+         <ul>
+                <li><a href="">SUMBER AIR PANAS</a></li>
+                <li><a href="">KOLAM ANAK & DEWASA</a>
+         <ul>
+                <li><a href="">REGULER</a></li>
+                <li><a href="">PREMIUM</a></li>
+          </ul>
+        </li>
+    </ul>
+</li>
+          <li><a href="">PUSAT KEBUGARAN</a></li>
+          <li><a href="">RUANG RAPAT</a></li>
+    </ul>
+</li>
+         <li><a href="">PESAN SEKARANG</a></li>
+    </ul>
+</nav>
+<main style="flex: 1; display: flex; gap: 50px; padding: 20px">
+  <div class="videos" style="display: flex; flex-direction: column; gap: 10px">
+    <iframe
+      src="https://youtu.be/9I2xta0ahIs"
+      frameborder="0"
+      allowfullscreen
+      width="300px"
+      height="200px">
+    </iframe>
+    <iframe
+      src="https://www.youtube.com/embed/H1CIBqDeWQ0"
+      frameborder="0"
+      allowfullscreen
+      width="300px"
+      height="200px">
+    </iframe>
+    <iframe
+      src="https://www.youtube.com/embed/H1CIBqDeWQ0"
+      frameborder="0"
+      allowfullscreen
+      width="300px"
+      height="200px">
+    </iframe>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td>
+          <img
+            src="download (3).jpeg"
+            alt=""
+            width="350px"
+            height="200px">
+        </td>
+        <td>
+          <img
+            src="download (3).jpeg"
+            alt=""
+            width="350px"
+            height="200px">
+        </td>
+        <td>
+          <img
+            src="download (3).jpeg"
+            alt=""
+            width="350px"
+            height="200px">
+        </td>
+        <tr>
+        <td>
+          <img
+            src="download (4).jpeg"
+            alt=""
+            width="350px"
+            height="200px">
+        </td>
+        <td>
+          <img
+            src="download (4).jpeg"
+            alt=""
+            width="350px"
+            height="200px">
+        </td>
+        <td>
+          <img
+            src="download (4).jpeg"
+            alt=""
+            width="350px"
+            height="200px">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="download (5).jpeg"
+            alt=""
+            width="350px"
+            height="200px"
+          />
+        </td>
+        <td>
+          <img
+            src="download (5).jpeg"
+            alt=""
+            width="350px"
+            height="200px"
+          />
+        </td>
+        <td>
+          <img
+            src="download (5).jpeg"
+            alt=""
+            width="350px"
+            height="200px"
+          />
+        </td>
+      </tr>
+    </table>
+  </div>
+</main>
+<footer style="flex: 0 0 5%;
+background-color: #f1f1f1;
+text-align: center;
+padding: 10px;">
+<p>Ⓒ Moh H Fahri</p>
+</footer>
+</body>
+</html>
