@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validasi Login</title>
+</head>
+<body>
+  <form id="loginForm">
+    <h1>LOGIN</h1>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button type="button" onclick="validateLogin()">Login</button>
+    <div id="message" class="message"></div>
+  </form>
+  <script>
+    // Username dan password yang benar
+    const validUsername = "fahri";
+    const validPassword = "admin123";
+
+    function validateLogin() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const message = document.getElementById("message");
+
+      // Reset pesan
+      message.textContent = "";
+      message.className = "message";
+
+      // Validasi input tidak boleh kosong
+      if (username === "" || password === "") {
+        message.textContent = "Username dan password tidak boleh kosong.";
+        message.classList.add("error");
+        return;
+      }
+
+      // Validasi username dan password
+      if (username === validUsername && password === validPassword) {
+        message.textContent = "Login berhasil!";
+        message.classList.add("success");
+      } else {
+        message.textContent = "Login gagal. Username atau password salah.";
+        message.classList.add("error");
+      }
+    }
+  </script>
+</body>
+</html>

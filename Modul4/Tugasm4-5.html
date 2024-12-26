@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="Tugas4-5.js"></script>
+</head>
+<body>
+    <!-- Form Login -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form onsubmit="event.preventDefault(); login();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Menu Utama -->
+    <div id="menu" style="display: none;">
+        <h2>Menu</h2>
+        <button onclick="showForm('addRoomForm')">Tambah Data Kamar</button>
+        <button onclick="showForm('addFacilityForm')">Tambah Data Fasilitas</button>
+    </div>
+
+    <!-- Form Tambah Data Kamar -->
+    <div id="addRoomForm" style="display: none;">
+        <h2>Tambah Data Kamar</h2>
+        <form onsubmit="return validateRoomForm();">
+            <label for="roomNumber">Nomor Kamar:</label>
+            <input type="text" id="roomNumber" name="roomNumber" required><br><br>
+            <label for="roomType">Tipe Kamar:</label>
+            <input type="text" id="roomType" name="roomType" required><br><br>
+            <button type="submit">Simpan</button>
+        </form>
+        <button onclick="showForm('menu')">Kembali</button>
+    </div>
+
+    <!-- Form Tambah Data Fasilitas -->
+    <div id="addFacilityForm" style="display: none;">
+        <h2>Tambah Data Fasilitas</h2>
+        <form onsubmit="return validateFacilityForm();">
+            <label for="facilityName">Nama Fasilitas:</label>
+            <input type="text" id="facilityName" name="facilityName" required><br><br>
+            <label for="description">Deskripsi:</label>
+            <textarea id="description" name="description" required></textarea><br><br>
+            <button type="submit">Simpan</button>
+        </form>
+        <button onclick="showForm('menu')">Kembali</button>
+    </div>
+</body>
+</html>
