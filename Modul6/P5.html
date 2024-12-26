@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akses Kamera dengan jQuery</title>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Menampilkan Video dari Kamera</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="start">Mulai Kamera</button>
+    <button id="stop">Hentikan Kamera</button>
+
+    <script>
+        $(document).ready(function() {
+            const video = document.getElementById('video');
+            let mediaStream;
+
+            $("#start").click(function() {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(stream => {
+                        mediaStream = stream;
+                        video.srcObject = stream;
+                    })
+                    .catch(err => {
+                        console.error('Gagal mengakses kamera:', err);
+                    });
+            });
+
+            $("#stop").click(function() {
+                if (mediaStream) {
+                    mediaStream.getTracks().forEach(track => track.stop());
+                    video.srcObject = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
